@@ -23,6 +23,17 @@ public class Wypieki {
         this.czasPieczenia = czasPieczenia;
     }
 
+    @Override
+    public String toString() {
+        return "Wypieki{" +
+                "id=" + id +
+                ", nazwa='" + nazwa + '\n' +
+                ", skladniki='" + skladniki + '\n'+
+                ", temperaturaPieczenia=" + temperaturaPieczenia + '\n'+
+                ", czasPieczenia=" + czasPieczenia +
+                '}';
+    }
+
     public int getId() {
         return id;
     }
