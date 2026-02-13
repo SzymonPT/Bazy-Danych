@@ -11,15 +11,15 @@ public class Wypieki {
     private String nazwa;
     private String skladniki;
     @ColumnInfo(name = "temperatura_pieczenia")
-    private int TemperaturaPieczenia;
+    private int temperaturaPieczenia;
     @ColumnInfo(name = "czas_pieczenia")
     private int czasPieczenia;
 
-    public Wypieki(int id, String nazwa, String skladniki, int temperaturaPieczenia, int czasPieczenia) {
-        this.id = id;
+    public Wypieki(String nazwa, String skladniki, int temperaturaPieczenia, int czasPieczenia) {
+        id = 0;
         this.nazwa = nazwa;
         this.skladniki = skladniki;
-        TemperaturaPieczenia = temperaturaPieczenia;
+        this.temperaturaPieczenia = temperaturaPieczenia;
         this.czasPieczenia = czasPieczenia;
     }
 
@@ -40,11 +40,11 @@ public class Wypieki {
     }
 
     public int getTemperaturaPieczenia() {
-        return TemperaturaPieczenia;
+        return temperaturaPieczenia;
     }
 
     public void setTemperaturaPieczenia(int temperaturaPieczenia) {
-        TemperaturaPieczenia = temperaturaPieczenia;
+        temperaturaPieczenia = temperaturaPieczenia;
     }
 
     public String getSkladniki() {

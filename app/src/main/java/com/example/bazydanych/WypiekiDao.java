@@ -7,7 +7,7 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import java.util.List;
-
+@Dao
 public interface WypiekiDao {
     @Insert
     public void wstawWypiekiDoBazy(Wypieki wypieki);

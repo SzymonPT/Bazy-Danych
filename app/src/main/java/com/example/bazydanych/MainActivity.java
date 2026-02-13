@@ -12,8 +12,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        PrzepisyDataBase przepisyDataBase;
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        przepisyDataBase = PrzepisyDataBase.zwrocInstancjeBazyDanych(MainActivity.this);
+        przepisyDataBase.zwrocWypiekiDao().wstawWypiekiDoBazy(new Wypieki("sernik","ser, kartofle, cukier",100, 120));
     }
 }
